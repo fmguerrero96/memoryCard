@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Cards from "./components/cards";
 
 function App() {
 
@@ -26,7 +27,7 @@ function App() {
 
   return (
     <div>
-    
+      <Cards teams={teams}/>
     </div>
   );
 }
