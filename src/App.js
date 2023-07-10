@@ -48,7 +48,7 @@ function App() {
 
   return (
     <div>
-      <Cards teams={teams}/>
+      <Cards shuffleTeams={handleShuffle} teams={teams}/>
     </div>
   );
 }
