@@ -48,7 +48,6 @@ function App() {
 
   return (
     <div>
-      <button onClick={handleShuffle}>shuffle</button>
       <Cards teams={teams}/>
     </div>
   );
