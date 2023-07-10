@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import uniqid from 'uniqid'
+import _ from 'lodash'
 import Cards from "./components/cards";
 import real from "/Users/misaelguerrero/Desktop/odinRepos/memory-card/src/badges/realMadrid.png"
 import milan from "/Users/misaelguerrero/Desktop/odinRepos/memory-card/src/badges/milan.png"
@@ -39,8 +40,15 @@ function App() {
     {teamName: 'Celtic', clicked: false, id: uniqid(), badge: celtic},
   ])
 
+  function handleShuffle() {
+    let newTeams = [...teams]
+    let shuffledTeams = _.shuffle(newTeams)
+    setTeams(shuffledTeams)
+  }
+
   return (
     <div>
+      <button onClick={handleShuffle}>shuffle</button>
       <Cards teams={teams}/>
     </div>
   );
