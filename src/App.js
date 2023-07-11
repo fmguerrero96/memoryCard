@@ -43,7 +43,6 @@ function App() {
   function handleShuffle(id) {
     const updatedTeams = teams.map((team) => {
       if (team.id === id) {
-        console.log(team)
         return { ...team, clicked: true };
       }
       return team;
