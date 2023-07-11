@@ -43,13 +43,13 @@ function App() {
   function handleShuffle(id) {
     const updatedTeams = teams.map((team) => {
       if (team.id === id) {
-        return { ...team, clicked: true };
+        return { ...team, clicked: true };  //first update the clicked card
       }
       return team;
     });
 
-    let shuffledTeams = _.shuffle(updatedTeams)
-    setTeams(shuffledTeams)
+    let shuffledTeams = _.shuffle(updatedTeams) //then, shuffle the array
+    setTeams(shuffledTeams) //set new array with updated object and shuffled 
   }
 
   return (
