@@ -40,9 +40,16 @@ function App() {
     {teamName: 'Celtic', clicked: false, id: uniqid(), badge: celtic},
   ])
 
-  function handleShuffle() {
-    let newTeams = [...teams]
-    let shuffledTeams = _.shuffle(newTeams)
+  function handleShuffle(id) {
+    const updatedTeams = teams.map((team) => {
+      if (team.id === id) {
+        console.log(team)
+        return { ...team, clicked: true };
+      }
+      return team;
+    });
+
+    let shuffledTeams = _.shuffle(updatedTeams)
     setTeams(shuffledTeams)
   }
 
