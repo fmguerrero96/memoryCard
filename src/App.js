@@ -20,7 +20,7 @@ import benfica from "/Users/misaelguerrero/Desktop/odinRepos/memory-card/src/bad
 import psv from "/Users/misaelguerrero/Desktop/odinRepos/memory-card/src/badges/psv.png"
 import celtic from "/Users/misaelguerrero/Desktop/odinRepos/memory-card/src/badges/celtic.png" 
 
-function App() {
+export default function App() {
 
   const [teams, setTeams] = useState([
     {teamName: 'Real Madrid', clicked: false, id: uniqid(), badge: real}, 
@@ -41,8 +41,6 @@ function App() {
     {teamName: 'Celtic', clicked: false, id: uniqid(), badge: celtic},
   ])
 
-  const [clickedTeams, setClickedTeams] = useState([])
-
   function handleShuffle(id) {
     const updatedTeams = teams.map((team) => {
       if (team.id === id) {
@@ -61,10 +59,8 @@ function App() {
 
   return (
     <div>
-      <Score/>
+      <Score teams={teams}/>
       <Cards shuffleTeams={handleShuffle} teams={teams}/>
     </div>
   );
 }
-
-export default App;
