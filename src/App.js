@@ -52,6 +52,10 @@ function App() {
     setTeams(shuffledTeams) //set new array with updated object and shuffled 
   }
 
+  useEffect(() => {
+    handleShuffle(null)
+  }, [])
+
   return (
     <div>
       <Cards shuffleTeams={handleShuffle} teams={teams}/>
