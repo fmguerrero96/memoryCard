@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import uniqid from 'uniqid'
 import _ from 'lodash'
 import Cards from "./components/cards";
+import Score from "./components/score";
 import real from "/Users/misaelguerrero/Desktop/odinRepos/memory-card/src/badges/realMadrid.png"
 import milan from "/Users/misaelguerrero/Desktop/odinRepos/memory-card/src/badges/milan.png"
 import liverpool from "/Users/misaelguerrero/Desktop/odinRepos/memory-card/src/badges/liverpool.png"
@@ -53,11 +54,12 @@ function App() {
   }
 
   useEffect(() => {
-    handleShuffle(null)
+    handleShuffle(null) //teams will be shuffled the first render
   }, [])
 
   return (
     <div>
+      <Score/>
       <Cards shuffleTeams={handleShuffle} teams={teams}/>
     </div>
   );
