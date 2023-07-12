@@ -41,6 +41,8 @@ function App() {
     {teamName: 'Celtic', clicked: false, id: uniqid(), badge: celtic},
   ])
 
+  const [clickedTeams, setClickedTeams] = useState([])
+
   function handleShuffle(id) {
     const updatedTeams = teams.map((team) => {
       if (team.id === id) {
