@@ -1,8 +1,7 @@
 import React from "react";
-import { useState, useEffect } from "react";
 
-export default function Score({teams}) {
-    const [clickedTeams, setClickedTeams] = useState([]);
+export default function Score({clickedTeams, highScore}) {
+    /*const [clickedTeams, setClickedTeams] = useState([]);
     const [highScore, setHighScore] = useState(0);
 
     useEffect(() => {
@@ -12,7 +11,7 @@ export default function Score({teams}) {
         if (updatedClickedTeams.length > highScore) {
             setHighScore(updatedClickedTeams.length);
           }
-      }, [teams, highScore]);
+      }, [teams, highScore]);*/
 
     return(
         <div className="scoreBoard">
