@@ -40,22 +40,25 @@ export default function App() {
     {teamName: 'PSV', clicked: false, id: uniqid(), badge: psv},
     {teamName: 'Celtic', clicked: false, id: uniqid(), badge: celtic},
   ])
-  //const [clickedTeams, setClickedTeams] = useState([]);
   const [highScore, setHighScore] = useState(0);
   const [score, setScore] = useState(0)
+
+  function youLose() {
+    let reset = teams.map((team) => {
+      team.clicked = false
+    })
+    setTeams(reset)
+  }
 
   function handleShuffle(id) {
     const updatedTeams = teams.map((team) => {
       if (team.id === id && team.clicked === true) {  //check if team has been clicked before
-        alert('helo')
+        alert('you lose')
         if(score > highScore){
           setHighScore(score)
         }
         setScore(0)
-        let reset = teams.map((team) => {
-          team.clicked = false
-        })
-        setTeams(reset)
+        youLose()
       } else if(team.id === id) {
         setScore(score + 1)
         return { ...team, clicked: true };  //first update the clicked card
@@ -70,6 +73,17 @@ export default function App() {
   useEffect(() => {
     handleShuffle(null) //teams will be shuffled the first render
   }, [])
+
+  /*useEffect(() => {
+    if(score === 16){
+      if(score > highScore){
+        setHighScore(score)
+      }
+      setScore(0)
+      alert('you win')
+      
+    }
+  })*/
 
   return (
     <div>
