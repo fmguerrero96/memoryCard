@@ -40,7 +40,7 @@ export default function App() {
     {teamName: 'PSV', clicked: false, id: uniqid(), badge: psv},
     {teamName: 'Celtic', clicked: false, id: uniqid(), badge: celtic},
   ])
-  const [clickedTeams, setClickedTeams] = useState([]);
+  //const [clickedTeams, setClickedTeams] = useState([]);
   const [highScore, setHighScore] = useState(0);
   const [score, setScore] = useState(0)
 
@@ -48,6 +48,9 @@ export default function App() {
     const updatedTeams = teams.map((team) => {
       if (team.id === id && team.clicked === true) {  //check if team has been clicked before
         alert('helo')
+        if(score > highScore){
+          setHighScore(score)
+        }
         setScore(0)
         let reset = teams.map((team) => {
           team.clicked = false
