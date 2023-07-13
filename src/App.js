@@ -43,7 +43,9 @@ export default function App() {
 
   function handleShuffle(id) {
     const updatedTeams = teams.map((team) => {
-      if (team.id === id) {
+      if (team.id === id && team.clicked === true) {  //check if team has been clicked before
+        alert('helo')
+      } else if(team.id === id) {
         return { ...team, clicked: true };  //first update the clicked card
       }
       return team;
