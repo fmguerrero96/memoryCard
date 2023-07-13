@@ -67,15 +67,6 @@ export default function App() {
     setTeams(shuffledTeams) //set new array with updated object and shuffled 
   }
 
-  /*useEffect(() => {
-      const updatedClickedTeams = teams.filter((team) => team.clicked === true);
-      setClickedTeams(updatedClickedTeams);
-
-      if (updatedClickedTeams.length > highScore) {
-          setHighScore(updatedClickedTeams.length);
-        }
-    }, [teams, highScore]);*/
-
   useEffect(() => {
     handleShuffle(null) //teams will be shuffled the first render
   }, [])
