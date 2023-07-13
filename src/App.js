@@ -79,7 +79,7 @@ export default function App() {
 
   return (
     <div>
-      <Score score={score} clickedTeams={clickedTeams} highScore={highScore} teams={teams}/>
+      <Score score={score} highScore={highScore}/>
       <Cards shuffleTeams={handleShuffle} teams={teams}/>
     </div>
   );
