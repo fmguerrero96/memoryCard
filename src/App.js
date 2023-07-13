@@ -42,12 +42,19 @@ export default function App() {
   ])
   const [clickedTeams, setClickedTeams] = useState([]);
   const [highScore, setHighScore] = useState(0);
+  const [score, setScore] = useState(0)
 
   function handleShuffle(id) {
     const updatedTeams = teams.map((team) => {
       if (team.id === id && team.clicked === true) {  //check if team has been clicked before
         alert('helo')
+        setScore(0)
+        let reset = teams.map((team) => {
+          team.clicked = false
+        })
+        setTeams(reset)
       } else if(team.id === id) {
+        setScore(score + 1)
         return { ...team, clicked: true };  //first update the clicked card
       }
       return team;
@@ -57,14 +64,14 @@ export default function App() {
     setTeams(shuffledTeams) //set new array with updated object and shuffled 
   }
 
-  useEffect(() => {
+  /*useEffect(() => {
       const updatedClickedTeams = teams.filter((team) => team.clicked === true);
       setClickedTeams(updatedClickedTeams);
 
       if (updatedClickedTeams.length > highScore) {
           setHighScore(updatedClickedTeams.length);
         }
-    }, [teams, highScore]);
+    }, [teams, highScore]);*/
 
   useEffect(() => {
     handleShuffle(null) //teams will be shuffled the first render
@@ -72,7 +79,7 @@ export default function App() {
 
   return (
     <div>
-      <Score clickedTeams={clickedTeams} highScore={highScore} teams={teams}/>
+      <Score score={score} clickedTeams={clickedTeams} highScore={highScore} teams={teams}/>
       <Cards shuffleTeams={handleShuffle} teams={teams}/>
     </div>
   );
