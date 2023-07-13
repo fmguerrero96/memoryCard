@@ -40,6 +40,8 @@ export default function App() {
     {teamName: 'PSV', clicked: false, id: uniqid(), badge: psv},
     {teamName: 'Celtic', clicked: false, id: uniqid(), badge: celtic},
   ])
+  const [clickedTeams, setClickedTeams] = useState([]);
+  const [highScore, setHighScore] = useState(0);
 
   function handleShuffle(id) {
     const updatedTeams = teams.map((team) => {
@@ -56,12 +58,21 @@ export default function App() {
   }
 
   useEffect(() => {
+      const updatedClickedTeams = teams.filter((team) => team.clicked === true);
+      setClickedTeams(updatedClickedTeams);
+
+      if (updatedClickedTeams.length > highScore) {
+          setHighScore(updatedClickedTeams.length);
+        }
+    }, [teams, highScore]);
+
+  useEffect(() => {
     handleShuffle(null) //teams will be shuffled the first render
   }, [])
 
   return (
     <div>
-      <Score teams={teams}/>
+      <Score clickedTeams={clickedTeams} highScore={highScore} teams={teams}/>
       <Cards shuffleTeams={handleShuffle} teams={teams}/>
     </div>
   );
