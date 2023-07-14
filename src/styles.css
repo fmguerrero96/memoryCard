@@ -1,0 +1,30 @@
+html, body, div, span, h1, h2, h3, h4, h5, h6, p,
+a, em, strong, ol, ul, li, form, footer, header,
+menu, nav {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.scoreBoard {
+    display: flex;
+    flex-direction: row;
+    height: 15vh;
+    background-color: rgb(0, 55, 132);
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+}
+
+.currentScore, .highScore {
+    font-size: 2rem;
+    margin: 0 2rem 0 2rem;
+}
