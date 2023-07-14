@@ -89,7 +89,7 @@ export default function App() {
   }, [score])
 
   return (
-    <div>
+    <div className="container">
       <Score score={score} highScore={highScore}/>
       <Cards shuffleTeams={handleShuffle} teams={teams}/>
     </div>
