@@ -93,6 +93,7 @@ export default function App() {
     <div className="container">
       <Score score={score} highScore={highScore}/>
       <Cards shuffleTeams={handleShuffle} teams={teams}/>
+      <footer>Created by Misael Guerrero</footer>
     </div>
   );
 }
