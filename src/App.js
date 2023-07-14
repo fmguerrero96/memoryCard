@@ -3,6 +3,7 @@ import uniqid from 'uniqid'
 import _ from 'lodash'
 import Cards from "./components/cards";
 import Score from "./components/score";
+import './styles.css'
 import real from "/Users/misaelguerrero/Desktop/odinRepos/memory-card/src/badges/realMadrid.png"
 import milan from "/Users/misaelguerrero/Desktop/odinRepos/memory-card/src/badges/milan.png"
 import liverpool from "/Users/misaelguerrero/Desktop/odinRepos/memory-card/src/badges/liverpool.png"
