@@ -53,7 +53,7 @@ export default function App() {
   function handleShuffle(id) {
     const updatedTeams = teams.map((team) => {
       if (team.id === id && team.clicked === true) {  //check if team has been clicked before
-        alert('you lose')
+        alert('You Lose')
         if(score > highScore){
           setHighScore(score)
         }
@@ -74,16 +74,19 @@ export default function App() {
     handleShuffle(null) //teams will be shuffled the first render
   }, [])
 
-  /*useEffect(() => {
+  useEffect(() => {
     if(score === 16){
       if(score > highScore){
         setHighScore(score)
       }
       setScore(0)
-      alert('you win')
-      
+      alert('You Win')
+      let reset = teams.map((team) => {
+        return{...team, clicked: false}
+      })
+      setTeams(reset)
     }
-  })*/
+  }, [score])
 
   return (
     <div>
