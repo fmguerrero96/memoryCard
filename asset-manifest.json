@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/memoryCard/static/css/main.b14dade2.css",
+    "main.js": "/memoryCard/static/js/main.26256f5f.js",
+    "static/media/manUnited.png": "/memoryCard/static/media/manUnited.bb406e8806824185350b.png",
+    "static/media/chelsea.png": "/memoryCard/static/media/chelsea.83f9fb7fde4688291747.png",
+    "static/media/liverpool.png": "/memoryCard/static/media/liverpool.ec02c7adcbcd78ecd544.png",
+    "static/media/celtic.png": "/memoryCard/static/media/celtic.537ccb909cbc60f55b02.png",
+    "static/media/bayern.png": "/memoryCard/static/media/bayern.32b8dba5f4279cc84ab5.png",
+    "static/media/porto.png": "/memoryCard/static/media/porto.90800dd6d5809fc501bd.png",
+    "static/media/benfica.png": "/memoryCard/static/media/benfica.b8bd0860c05008d05860.png",
+    "static/media/realMadrid.png": "/memoryCard/static/media/realMadrid.a37ffe2f6b0851f48dc7.png",
+    "static/media/feyenoord.png": "/memoryCard/static/media/feyenoord.7387aa63559a45dcdad8.png",
+    "static/media/psv.png": "/memoryCard/static/media/psv.ea6db6fd2d8c5567ab3d.png",
+    "static/media/dortmund.png": "/memoryCard/static/media/dortmund.9b2acbb7465fe90d6314.png",
+    "static/media/barcelona.png": "/memoryCard/static/media/barcelona.225a022681258fdf75cb.png",
+    "static/media/inter.png": "/memoryCard/static/media/inter.466498c33187906a3d0c.png",
+    "static/media/milan.png": "/memoryCard/static/media/milan.594eebb302feb5499f43.png",
+    "static/media/ajax.png": "/memoryCard/static/media/ajax.0c6870f96c83be93fcc5.png",
+    "index.html": "/memoryCard/index.html",
+    "main.b14dade2.css.map": "/memoryCard/static/css/main.b14dade2.css.map",
+    "main.26256f5f.js.map": "/memoryCard/static/js/main.26256f5f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b14dade2.css",
+    "static/js/main.26256f5f.js"
+  ]
+}
